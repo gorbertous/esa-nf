@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="header-navbar">
+
+		<nav class="sb-topnav navbar navbar-expand-lg navbar-white navbar-light bg-light">
+		
+		<button class="btn ml-1" id="sidebarToggle" href="#"><span class="navbar-toggler-icon p-4"></span></button>
+			
+			<!-- Navbar brand -->
+			<a class="navbar-brand logo-text" href="/"><span
+				class="text-info">ESA</span><span
+				class="text-primary font-weight-bolder">2010</span>
+			</a>
+			  
+
+<!-- 			<button class="navbar-toggler" id="sidebarToggle" href="#"> -->
+<!-- 				<span class="navbar-toggler-icon p-4"></span> -->
+<!-- 			</button> -->
+
+			<div class="container">
+			<span class="navbar-text title-text text-secondary d-none d-lg-inline-block ">
+				European System of Accounts 
+			</span>
+
+			
+			<!-- Links -->
+			<ul class="navbar-nav mr-auto">
+
+				<li class="nav-item"><a class="nav-link" href="#"> <img
+						src="/img/Eurostat_logo_RGB_60_sm.jpg"
+						th:attr="src=@{/img/800px-Eurostat_Newlogo.png}" alt="Eurostat"
+						class="d-none d-lg-inline-block img-fluid"
+						style="max-height: 100px;" />
+				</a></li>
+
+			</ul>
+
+			<!-- Form -->
+			<form
+				class="d-none d-lg-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+				<div class="input-group">
+					<input class="form-control" type="text"
+						placeholder="Search for..." aria-label="Search"
+						aria-describedby="basic-addon2" />
+					<div class="input-group-append">
+						<button class="btn btn-primary" type="button">
+							<i class="fas fa-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			</div>
+			
+		</nav>
+
+	</div>
+</body>
+</html>

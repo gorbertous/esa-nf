@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+
+<title>ESA2010 Chapters</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css"/>
+
+</head>
+<body class="sb-nav-fixed">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+		
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar"/>
+
+
+		<div id="layoutSidenav_content">
+			
+			<!-- Left chapters navigation -->
+			<div th:replace="fragments/left :: left"/>
+			
+			<main>
+				<div class="container-fluid">
+					
+					<!-- Acronymns -->
+					<div th:replace="fragments/acronymns :: acronymns"/>
+					
+					<!-- Update Chapter Form -->
+					<div class="container">
+						
+						<h2>Update Chapter</h2>
+
+						<form action="#" th:action="@{/saveChapter}" th:object="${chapter}"
+							method="POST">
+							
+							<!-- Add hidden form field to handle update -->
+							<input type="hidden" th:field="*{id}" />
+							
+							<input type="text" th:field="*{title}" class="form-control mb-4 col-12">
+							
+							<textarea rows="10" th:field="*{htmltext}" class="form-control mb-4 col-12"></textarea>
+								
+							<button type="submit" class="btn btn-info col-2"> Update Chapter</button>
+						</form>
+						
+						<hr>
+						
+						<a th:href = "@{/chapters}"> Back to Chapter List</a>
+					</div>
+
+				</div>
+			</main>
+
+
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer"/>
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js"/>
+</body>
+</html>

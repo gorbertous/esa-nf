@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+
+<title>Login</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css"/>
+
+</head>
+<body class="sb-nav-fixed">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+		
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar"/>
+
+
+		<div id="layoutSidenav_content">
+			
+			<!-- Left chapters navigation -->
+			<div th:replace="fragments/left :: left"/>
+			
+			<main>
+				<div class="container-fluid">
+					
+<!-- 					<nav class="navbar navbar-inverse navbar-fixed-top"> -->
+<!-- 						<div class="container"> -->
+<!-- 							<div class="navbar-header"> -->
+<!-- 								<button type="button" class="navbar-toggle collapsed" -->
+<!-- 									data-toggle="collapse" data-target="#navbar" aria-expanded="false" -->
+<!-- 									aria-controls="navbar"> -->
+<!-- 									<span class="sr-only">Toggle navigation</span> <span -->
+<!-- 										class="icon-bar"></span> <span class="icon-bar"></span> <span -->
+<!-- 										class="icon-bar"></span> -->
+<!-- 								</button> -->
+<!-- 								<a class="navbar-brand" href="#" th:href="@{/}">Registration and -->
+<!-- 									Login Module</a> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</nav> -->
+				
+<!-- 					<br> -->
+<!-- 					<br> -->
+					
+					<!-- Login Form -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<h1>Login page</h1>
+								<form th:action="@{/login}" method="post">
+									<div th:if="${param.error}">
+										<div class="alert alert-danger">Invalid username or
+											password.</div>
+									</div>
+									<div th:if="${param.logout}">
+										<div class="alert alert-info">You have been logged out.</div>
+									</div>
+									<div class="form-group">
+										<label for="username">Username</label>: <input type="text"
+											id="username" name="username" class="form-control"
+											autofocus="autofocus" placeholder="Username" />
+									</div>
+									<div class="form-group">
+										<label for="password">Password</label>: <input type="password"
+											id="password" name="password" class="form-control"
+											placeholder="Password" />
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit"
+													class="form-control btn btn-primary" value="Log In" />
+											</div>
+										</div>
+									</div>
+	<!-- 								<div class="form-group"> -->
+	<!-- 									<span>New user? <a href="/" th:href="@{/registration}">Register -->
+	<!-- 											here</a></span> -->
+	<!-- 								</div> -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer"/>
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js"/>
+</body>
+</html>
+

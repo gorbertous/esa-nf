@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="header-navbar-home">
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+			<div class="container">
+				<div class="d-flex order-0">
+					<a class="navbar-brand" href="/"> <img
+						src="/img/esa_logo_sm.png" th:attr="src=@{/img/esa_logo_sm.png}"
+						alt="ESA2010" class="float-left" /></a>
+
+						<button class="navbar-toggler" type="button"
+							data-toggle="collapse" data-target="#navbarResponsive"
+							aria-controls="navbarResponsive" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button> 
+						<span class="w-10"></span>
+				</div>
+				<span class="w-50 text-center text-white"><h5>European
+						system of accounts</h5></span>
+
+				
+					<ul class="navbar-nav ml-auto">
+
+						<li id="link-chapter" class="nav-item"><a class="nav-link"
+							href="/chapters">Chapters</a></li>
+						
+					</ul>
+				
+			</div>
+		</nav>
+
+	</div>
+</body>
+</html>

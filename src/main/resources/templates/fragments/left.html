@@ -1,0 +1,52 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="left">
+
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark elevation-4"
+				id="sub-zero">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+
+						<div class="sb-sidenav-menu-heading">CHAPTERS</div>
+						
+						<!-- chapter 1 Menu -->
+						<div th:replace="fragments/chapter1-menu :: chapter1-menu" />
+						
+						<a class="nav-link" href="/chapter/view/2" id="2">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> Chapter 2
+						</a> 
+						
+						<!-- chapter 3 Menu -->
+						<div th:replace="fragments/chapter3-menu :: chapter3-menu" />
+
+
+						<a class="nav-link" href="/chapter/view/4" id="4">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> Chapter 4
+						</a>
+						
+						<a class="nav-link" data-toggle="collapse" href="#acronyms" role="button" aria-expanded="false" aria-controls="acronyms" id="99999">
+		                    <div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> Abbreviations
+		                </a>
+						
+					
+					</div>
+				</div>
+				<!--        <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Username
+        </div>-->
+			</nav>
+		</div>
+	</div>
+
+</body>
+</html>
