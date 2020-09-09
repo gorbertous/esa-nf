@@ -1,32 +1,29 @@
 (function($) {
 	"use strict";
-	
-//	$('#layoutSidenav_nav').collapse({
-//  toggle: false
-//})
 
 	// set active class on clicked element
-	$("#layoutSidenav_nav .nav .nav-link").on("click", function() {
+	$("#layoutSidenav_nav .nav .nav-link").on("click", function(e) {
 
-//		$('.nav-item').not(this).each(function(a, b){
-//    $(b).find('div.collapse.show').each(function(x, y) {
-//        $(this).removeClass('show');
-//    });
-//  });
-		var somehash = event.target.hash;
+		var somehash = e.target.hash;
 
-		if (somehash === void (0)) {
-			var hash_id = 100;
-		} else {
+		var url = e.target.href;
+
+		var chapterId = url.substring(
+			url.lastIndexOf("view/") + 5,
+			url.lastIndexOf("/")
+		);
+
+		window.sessionStorage.setItem("chapter_id", chapterId);
+
+		if (somehash !== void (0)) {
+
 			var hash_id = somehash.substring(2);
-		}
+			$(".nav").find(".active").removeClass("active");
+			if (this.id === hash_id) {
 
-
-		$(".nav").find(".active").removeClass("active");
-		if (this.id === hash_id) {
-
-			window.sessionStorage.setItem("anchor_id", this.id);
-			$(this).addClass("active");
+				window.sessionStorage.setItem("anchor_id", this.id);
+				$(this).addClass("active");
+			}
 		}
 
 	});
@@ -45,6 +42,10 @@
 	// add active to sidebar navigation link
 	var selected_link = window.sessionStorage.getItem("anchor_id");
 	$("#" + selected_link).addClass("active");
+
+	// expand chapter elements based on clicked chapter id
+	var id = window.sessionStorage.getItem("chapter_id");
+	$("#ch" + id + "collapsePages").addClass("show");
 
 })(jQuery);
 
