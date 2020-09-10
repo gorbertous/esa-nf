@@ -10584,4 +10584,15 @@ aside {
 	font-size: 1.50rem !important;
 }
 
+.tg .tg-0lax {
+  background-color: #FFFFFF;
+  text-align: left;
+  vertical-align: top
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 

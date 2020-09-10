@@ -9,8 +9,14 @@
 				id="sub-zero">
 				<div class="sb-sidenav-menu">
 					<div class="nav">
-
+					
 						<div class="sb-sidenav-menu-heading">CHAPTERS</div>
+						
+						<a class="nav-link" data-toggle="collapse" href="#acronyms" role="button" aria-expanded="false" aria-controls="acronyms">
+		                    <div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> List of abbreviations and acronyms
+		                </a>
 						
 						<!-- chapter 1 Menu -->
 						<div th:replace="fragments/chapter1-menu :: chapter1-menu" />
@@ -20,18 +26,26 @@
 						
 						<!-- chapter 3 Menu -->
 						<div th:replace="fragments/chapter3-menu :: chapter3-menu" />
-
-
+						
 						<!-- chapter 4 Menu -->
 						<div th:replace="fragments/chapter4-menu :: chapter4-menu" />
 						
-						<a class="nav-link" data-toggle="collapse" href="#acronyms" role="button" aria-expanded="false" aria-controls="acronyms" id="99999">
-		                    <div class="sb-nav-link-icon">
-								<i class="fas fa-columns"></i>
-							</div> Abbreviations
+						<a class="nav-link" href="/chapter/view/5">
+		                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+		                    Chapter 5
+		                </a>
+		                
+		                <a class="nav-link" href="/chapter/view/6">
+		                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+		                    Chapter 6
+		                </a>
+		                
+		                <a class="nav-link" href="/chapter/view/7">
+		                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+		                    Chapter 7
 		                </a>
 						
-					
+						
 					</div>
 				</div>
 				<!--        <div class="sb-sidenav-footer">

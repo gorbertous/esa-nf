@@ -8,12 +8,16 @@
 
 		var url = e.target.href;
 
-		var chapterId = url.substring(
-			url.lastIndexOf("view/") + 5,
-			url.lastIndexOf("/")
-		);
+		if (url !== void (0)) {
 
-		window.sessionStorage.setItem("chapter_id", chapterId);
+			var chapterId = url.substring(
+				url.lastIndexOf("view/") + 5,
+				url.lastIndexOf("/")
+			);
+
+			window.sessionStorage.setItem("chapter_id", chapterId);
+
+		}
 
 		if (somehash !== void (0)) {
 
@@ -40,12 +44,16 @@
 	});
 
 	// add active to sidebar navigation link
-	var selected_link = window.sessionStorage.getItem("anchor_id");
-	$("#" + selected_link).addClass("active");
+	if (window.sessionStorage.getItem("anchor_id") !== void (0)) {
+		var selected_link = window.sessionStorage.getItem("anchor_id");
+		$("#" + selected_link).addClass("active");
+	}
 
 	// expand chapter elements based on clicked chapter id
-	var id = window.sessionStorage.getItem("chapter_id");
-	$("#ch" + id + "collapsePages").addClass("show");
+	if (window.sessionStorage.getItem("chapter_id") !== void (0)) {
+		var id = window.sessionStorage.getItem("chapter_id");
+		$("#ch" + id + "collapsePages").addClass("show");
+	}
 
 })(jQuery);
 
