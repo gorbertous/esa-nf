@@ -24,7 +24,7 @@ public class ChapterController {
 	// display list of chapters
 	@GetMapping("/chapters")
     public String viewHomePage(Model model) {
-        return findPaginated(1, "title", "asc", model);
+        return findPaginated(1, "id", "asc", model);
     }
 	
 	@GetMapping("/chapter/view/{id}")
