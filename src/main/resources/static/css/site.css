@@ -10043,11 +10043,11 @@ body {
   display: flex;
 }
 #layoutSidenav #layoutSidenav_nav {
-  flex-basis: 300px;
+  flex-basis: 360px;
   flex-shrink: 0;
   transition: transform 0.15s ease-in-out;
   z-index: 1038;
-  transform: translateX(-300px);
+  transform: translateX(-360px);
 }
 #layoutSidenav #layoutSidenav_content {
   position: relative;
@@ -10057,7 +10057,7 @@ body {
   min-width: 0;
   flex-grow: 1;
   min-height: calc(100vh - 100px);
-  margin-left: -300px;
+  margin-left: -360px;
 }
 
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
@@ -10087,10 +10087,10 @@ body {
   }
 
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
-    transform: translateX(-300px);
+    transform: translateX(-360px);
   }
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content {
-    margin-left: -300px;
+    margin-left: -360px;
   }
   .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
     display: none;
@@ -10100,7 +10100,7 @@ body {
   z-index: 1039;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_nav {
-  width: 300px;
+  width: 360px;
   height: 100vh;
   z-index: 1038;
 }
@@ -10111,7 +10111,7 @@ body {
   overflow-y: auto;
 }
 .sb-nav-fixed #layoutSidenav #layoutSidenav_content {
-  padding-left: 300px;
+  padding-left: 360px;
   top: 100px;
 }
 
@@ -10144,7 +10144,7 @@ body {
   border-bottom: 1px solid #dee2e6;
 }
 .sb-topnav .navbar-brand {
-  width: 300px;
+  width: 360px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: 0;
@@ -10523,16 +10523,17 @@ h1:first-letter {
 }
 
 .h6 {
-  color: rgb(135, 135, 135) !important;
+  color: #6c757d !important;
   font-size: 15px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   /*font-family: 'Myriad Pro Regular', sans-serif;*/
   letter-spacing: 0.5px;
   /* line-height: 56px; */
 }
 
 .h7 {
-  color: rgb(135, 135, 135) !important;
+  font-style: italic;
+  color: #6c757d !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   /*font-family: 'Myriad Pro Regular', sans-serif;*/
@@ -10541,7 +10542,7 @@ h1:first-letter {
 }
 
 .h8 {
-  color: rgb(135, 135, 135) !important;
+  color: #6c757d !important;
   font-size: 15px !important;
   font-weight: 600 !important;
   /*font-family: 'Myriad Pro Regular', sans-serif;*/
@@ -10581,7 +10582,7 @@ aside {
 }
 
 .title-text{
-	font-size: 1.50rem !important;
+	font-size: 1.8rem !important;
 }
 
 .tg .tg-0lax {
@@ -10595,4 +10596,32 @@ aside {
   justify-content: space-between;
 }
 
+.text-aqua{
+	color: aqua;
+}
 
+.text-navy{
+	color: navy;
+}
+
+.social a {
+  padding: 0 .5em;
+}
+
+.card-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: none !important;
+}
+
+
+
+
+
+
+ 

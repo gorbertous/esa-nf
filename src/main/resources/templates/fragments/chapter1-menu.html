@@ -1,407 +1,637 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-</head>
-<body>
-<div th:fragment="chapter1-menu">
+    <head>
+    </head>
+    <body>
+        <div th:fragment="chapter1-menu">
 
-    <a class="nav-link collapsed" href="" data-toggle="collapse"
-       data-target="#ch1collapsePages" aria-expanded="true"
-       aria-controls="ch1collapsePages">
-        <div class="sb-nav-link-icon">
-            <i class="fas fa-book-open"></i>
-        </div> Chapter 1
-        <div class="sb-sidenav-collapse-arrow">
-            <i class="fas fa-angle-down"></i>
-        </div>
-    </a>
-    <div class="collapse" id="ch1collapsePages"
-         aria-labelledby="ch1headingOne" data-parent="#sub-zero">
-        <nav class="sb-sidenav-menu-nested nav accordion" id="ch1-sub-1">
-            <!-- chapter header title -->
-            <a class="nav-link collapsed" href="" data-toggle="collapse"
-               data-target="#ch1-sub-2" aria-expanded="true"
-               aria-controls="ch1-sub-2">
-
+            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h1}" id="1"
+               data-toggle="collapse" data-target="#ch1collapsePages"
+               aria-expanded="false" aria-controls="ch1collapsePages">
                 <div class="sb-nav-link-icon">
-                    <i class="fas fa-stroopwafel text-info"></i>
-                </div> General features and basic principles
+                    <i class="fas fa-book-open"></i>
+                </div>1. General features and basic principles&nbsp;
                 <div class="sb-sidenav-collapse-arrow">
                     <i class="fas fa-angle-down"></i>
                 </div>
             </a>
-            <!--1.01 with sub elements-->
-            <div class="collapse show" id="ch1-sub-2"
-                 aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href="" data-toggle="collapse"
-                       data-target="#ch1-sub-3-1" aria-expanded="true"
-                       aria-controls="ch1-sub-3-1">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> General features
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-
-                    <div class="collapse show" id="ch1-sub-3-1"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+            <div class="collapse" id="ch1collapsePages"
+                 aria-labelledby="ch1headingOne">
+                <nav class="nav accordion" id="ch1-sub-1">
+                    <!--1.01 with sub elements-->
+                    <div class="collapse show" id="ch1-sub-2"
+                         aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h4" id="4">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h3}" id="3" data-toggle="collapse"
+                               data-target="#ch1-sub-3-1" aria-expanded="true"
+                               aria-controls="ch1-sub-3-1">
                                 <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> Globalisation
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> General features
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
                             </a>
+
+                            <div class="collapse show" id="ch1-sub-3-1"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h4}" id="4">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Globalisation
+                                    </a>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+                    <!--1.18 with sub elements-->
+                    <div class="collapse show" id="ch1-sub-2"
+                         aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h5}" id="5" data-toggle="collapse"
+                               data-target="#ch1-sub-3-2" aria-expanded="true"
+                               aria-controls="ch1-sub-3-2">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Uses of the ESA 2010
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h6}" id="6">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Framework for analysis and policy
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h7}" id="7">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Characteristics of the ESA 2010 concepts
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h8}" id="8">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Classification by sector
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h9}" id="9">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Satellite accounts
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h10}" id="10">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> The ESA 2010 and the 2008 SNA
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3-2"
+                                 aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/1/#h11}" id="11">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> The ESA 2010 and the ESA 95
+                                    </a>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+                    <!--1.53 with sub elements-->
+                    <div class="collapse show" id="ch1-sub-2"
+                         aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h12}" id="12" data-toggle="collapse"
+                               data-target="#ch1-sub-3" aria-expanded="true"
+                               aria-controls="ch1-sub-3">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Basic principles of the ESA 2010 as a system
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+
+                            <div class="collapse show" id="ch1-sub-3"
+                                 aria-labelledby="headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h13}" id="13" data-toggle="collapse"
+                                       data-target="#ch1-sub-4-1" aria-expanded="false"
+                                       aria-controls="ch1-sub-4-1">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Statistical units and their groupings
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch1-sub-4-1"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h14}" id="14">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Institutional units and sectors
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-1"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h15}" id="15">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Local KAUs and industries
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-1"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h16}" id="16">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Resident and non-resident units; total economy and rest of
+                                                the world
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch1-sub-3"
+                                 aria-labelledby="headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h17}" id="17" data-toggle="collapse"
+                                       data-target="#ch1-sub-4-2" aria-expanded="false"
+                                       aria-controls="ch1-sub-4-2">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Flows and stocks
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch1-sub-4-2"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h18}" id="18" data-toggle="collapse"
+                                               data-target="#ch1-sub-5-1" aria-expanded="false"
+                                               aria-controls="ch1-sub-5-1">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Flows
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <!--This has level 4 and 5 elements - pending 14 nav items-->
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h19}"
+                                                       id="19">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Transactions
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h20}"
+                                                       id="20">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Properties of transactions
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h21}"
+                                                       id="21">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Interactions versus intra-unit transactions
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h22}"
+                                                       id="22">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Monetary versus non-monetary transactions
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h23}"
+                                                       id="23">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Transactions with and without counterparts
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h24}"
+                                                       id="24">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Rearranged transactions
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h25}"
+                                                       id="25">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Rerouting
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h26}"
+                                                       id="26">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Partitioning
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h26}"
+                                                       id="26">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Recognising the principal party to a transaction
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h28}"
+                                                       id="28">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Borderline cases
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h28}"
+                                                       id="28">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Other changes in assets
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h30}"
+                                                       id="30">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Other changes in the volume of assets and liabilities
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-1"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-2">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h31}"
+                                                       id="31">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                                        </div> Holding gains and losses
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-2"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h32}" id="32">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Stocks
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!--1.88 with sub elements-->
+                            <div class="collapse show" id="ch1-sub-3"
+                                 aria-labelledby="headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h33}" id="33" data-toggle="collapse"
+                                       data-target="#ch1-sub-4-3" aria-expanded="false"
+                                       aria-controls="ch1-sub-4-3">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> The system of accounts and the aggregates
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch1-sub-4-3"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h34}" id="34" data-toggle="collapse"
+                                               data-target="#ch1-sub-5-2" aria-expanded="false"
+                                               aria-controls="ch1-sub-5-2">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Rules of accounting
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch1-sub-5-2"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h35}"
+                                                       id="35">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Terminology for the two sides of the accounts
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-2"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h36}"
+                                                       id="36">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Double entry/quadruple entry
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+
+                                    <div class="collapse show" id="ch1-sub-4-3"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h37}" id="37" data-toggle="collapse"
+                                               data-target="#ch1-sub-5-3" aria-expanded="false"
+                                               aria-controls="ch1-sub-5-3">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Valuation
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch1-sub-5-3"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h38}"
+                                                       id="38">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Special valuations concerning products
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-3"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h39}"
+                                                       id="39">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Valuation at constant prices
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-3"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h40}" id="40">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Time of recording
+                                            </a>
+                                        </nav>
+                                    </div>
+
+                                    <div class="collapse show" id="ch1-sub-4-3"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h41}" id="41" data-toggle="collapse"
+                                               data-target="#ch1-sub-5-4" aria-expanded="false"
+                                               aria-controls="ch1-sub-5-4">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Consolidation and netting
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch1-sub-5-4"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h42}"
+                                                       id="42">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Consolidation
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch1-sub-5-4"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-4-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h43}"
+                                                       id="43">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Netting
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-3"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h44}" id="44">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Accounts, balancing items and aggregates
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!--1.113 with sub elements-->
+                            <div class="collapse show" id="ch1-sub-3"
+                                 aria-labelledby="headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h45}" id="45" data-toggle="collapse"
+                                       data-target="#ch1-sub-4-4" aria-expanded="false"
+                                       aria-controls="ch1-sub-4-4">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> The sequence of accounts
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+
+                                    <div class="collapse show" id="ch1-sub-4-4"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h46}" id="46">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> The goods and services account
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-4"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h47}" id="47">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> The rest of the world account
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-4"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h48}" id="48">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Balancing items
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <!--This has level 4 - pending 1 nav items-->
+                                    <div class="collapse show" id="ch1-sub-4-4"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h49}" id="49" data-toggle="collapse"
+                                               data-target="#ch1-sub-5-5" aria-expanded="false"
+                                               aria-controls="ch1-sub-5-5">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Aggregates
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch1-sub-5-5"
+                                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/1/#h50}"
+                                                       id="50">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> GDP: a key aggregate
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <!--1.136 with sub elements-->
+                            <div class="collapse show" id="ch1-sub-3"
+                                 aria-labelledby="headingThree" data-parent="#ch1-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/1/#h51}" id="51" data-toggle="collapse"
+                                       data-target="#ch1-sub-4-5" aria-expanded="false"
+                                       aria-controls="ch1-sub-4-5">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> The input-output framework
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+
+                                    <div class="collapse show" id="ch1-sub-4-5"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h52}" id="52">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Supply and use tables
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch1-sub-4-5"
+                                         aria-labelledby="headingThree" data-parent="#ch1-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/1/#h53}" id="53">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Symmetric input-output tables
+                                            </a>
+                                        </nav>
+                                    </div>
+
+                                </nav>
+                            </div>
                         </nav>
                     </div>
                 </nav>
             </div>
-            <!--1.18 with sub elements-->
-            <div class="collapse show" id="ch1-sub-2"
-                 aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href="" data-toggle="collapse"
-                       data-target="#ch1-sub-3-2" aria-expanded="true"
-                       aria-controls="ch1-sub-3-2">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Uses of the ESA 2010
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h6" id="6">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> Framework for analysis and policy
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h7" id="7">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> Characteristics of the ESA 2010 concepts
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h8" id="8">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> Classification by sector
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h9" id="9">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> Satellite accounts
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h10" id="10">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> The ESA 2010 and the 2008 SNA
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3-2"
-                         aria-labelledby="ch1headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/1/#h11" id="11">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-info"></i>
-                                </div> The ESA 2010 and the ESA 95
-                            </a>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
-            <!--1.53 with sub elements-->
-            <div class="collapse show" id="ch1-sub-2"
-                 aria-labelledby="ch1headingTwo" data-parent="#ch1-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href="" data-toggle="collapse"
-                       data-target="#ch1-sub-3" aria-expanded="true"
-                       aria-controls="ch1-sub-3">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Basic principles of the ESA 2010 as a system
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-
-                    <div class="collapse show" id="ch1-sub-3"
-                         aria-labelledby="headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href="" data-toggle="collapse"
-                               data-target="#ch1-sub-4-1" aria-expanded="false"
-                               aria-controls="ch1-sub-4-1">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Statistical units and their groupings
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse show" id="ch1-sub-4-1"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h14" id="14">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Institutional units and sectors
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-1"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h15" id="15">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Local KAUs and industries
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-1"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h16" id="16">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Resident and non-resident units; total economy and rest of
-                                        the world
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch1-sub-3"
-                         aria-labelledby="headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href="" data-toggle="collapse"
-                               data-target="#ch1-sub-4-2" aria-expanded="false"
-                               aria-controls="ch1-sub-4-2">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Flows and stocks
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <!--This has level 4 and 5 elements - pending 14 nav items-->
-                            <div class="collapse show" id="ch1-sub-4-2"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h18" id="18">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Flows
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-2"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h32" id="32">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Stocks
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <!--1.88 with sub elements-->
-                    <div class="collapse show" id="ch1-sub-3"
-                         aria-labelledby="headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href="" data-toggle="collapse"
-                               data-target="#ch1-sub-4-3" aria-expanded="false"
-                               aria-controls="ch1-sub-4-3">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> The system of accounts and the aggregates
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <!--This has level 4 and 5 elements - pending 2 nav items-->
-                            <div class="collapse show" id="ch1-sub-4-3"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h34" id="34">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Rules of accounting
-                                    </a>
-                                </nav>
-                            </div>
-                            <!--This has level 4 and 5 elements - pending 2 nav items-->
-                            <div class="collapse show" id="ch1-sub-4-3"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h37" id="37">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Valuation
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-3"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h40" id="40">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Time of recording
-                                    </a>
-                                </nav>
-                            </div>
-                            <!--This has level 4 and 5 elements - pending 2 nav items-->
-                            <div class="collapse show" id="ch1-sub-4-3"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h41" id="41">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Consolidation and netting
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-3"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h44" id="44">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Accounts, balancing items and aggregates
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <!--1.113 with sub elements-->
-                    <div class="collapse show" id="ch1-sub-3"
-                         aria-labelledby="headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href="" data-toggle="collapse"
-                               data-target="#ch1-sub-4-4" aria-expanded="false"
-                               aria-controls="ch1-sub-4-4">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> The sequence of accounts
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            
-                            <div class="collapse show" id="ch1-sub-4-4"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h46" id="46">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> The goods and services account
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-4"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h47" id="47">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> The rest of the world account
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-4"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h48" id="48">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Balancing items
-                                    </a>
-                                </nav>
-                            </div>
-                            <!--This has level 4 - pending 1 nav items-->
-                            <div class="collapse show" id="ch1-sub-4-4"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h49" id="49">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Aggregates
-                                    </a>
-                                </nav>
-                            </div>
-                            
-                        </nav>
-                    </div>
-                    
-                    <!--1.136 with sub elements-->
-                    <div class="collapse show" id="ch1-sub-3"
-                         aria-labelledby="headingThree" data-parent="#ch1-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href="" data-toggle="collapse"
-                               data-target="#ch1-sub-4-5" aria-expanded="false"
-                               aria-controls="ch1-sub-4-5">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> The input-output framework
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            
-                            <div class="collapse show" id="ch1-sub-4-5"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h52" id="52">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Supply and use tables
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch1-sub-4-5"
-                                 aria-labelledby="headingThree" data-parent="#ch1-sub-3">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/1/#h53" id="53">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Symmetric input-output tables
-                                    </a>
-                                </nav>
-                            </div>
-                            
-                        </nav>
-                    </div>
-                    
-                </nav>
-            </div>
-        </nav>
-    </div>
-</div>
-</body>
+        </div>
+    </body>
 </html>

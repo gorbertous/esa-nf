@@ -20,13 +20,15 @@ public class ChapterController {
 
 	@Autowired
 	private ChapterService chapterService;
+	
+	private static final String CHAPTER = "chapter";
 
 	// display list of chapters
 	@GetMapping("/chapters")
-    public String viewHomePage(Model model) {
-        return findPaginated(1, "id", "asc", model);
-    }
-	
+	public String chaptersList(Model model) {
+		return findPaginated(1, "id", "asc", model);
+	}
+
 	@GetMapping("/chapter/view/{id}")
 	public String getChapter(@PathVariable(value = "id") int id, Model model) {
 
@@ -34,20 +36,20 @@ public class ChapterController {
 		Chapter chapter = chapterService.getChapterById(id);
 
 		// set chapter as a model attribute to pre-populate the form
-		model.addAttribute("chapter", chapter);
-		return "chapter";
+		model.addAttribute(CHAPTER, chapter);
+		return CHAPTER;
 	}
-	
+
 	@GetMapping("/chapters/new")
 	public String showNewChapterForm(Model model) {
 		// create model attribute to bind form data
 		Chapter chapter = new Chapter();
-		model.addAttribute("chapter", chapter);
+		model.addAttribute(CHAPTER, chapter);
 		return "new_chapter";
 	}
 
 	@PostMapping("/saveChapter")
-	public String saveChapter(@ModelAttribute("chapter") Chapter chapter) {
+	public String saveChapter(@ModelAttribute(CHAPTER) Chapter chapter) {
 		// save chapter to database
 		chapterService.saveChapter(chapter);
 		return "redirect:/chapters";
@@ -60,7 +62,7 @@ public class ChapterController {
 		Chapter chapter = chapterService.getChapterById(id);
 
 		// set chapter as a model attribute to pre-populate the form
-		model.addAttribute("chapter", chapter);
+		model.addAttribute(CHAPTER, chapter);
 		return "update_chapter";
 	}
 
@@ -72,26 +74,24 @@ public class ChapterController {
 		return "redirect:/chapters";
 	}
 
-	@GetMapping("/page/{pageNo}")
-	public String findPaginated(@PathVariable(value = "pageNo") int pageNo,
-	    @RequestParam("sortField") String sortField,
-	    @RequestParam("sortDir") String sortDir,
-	    Model model) {
-	    int pageSize = 10;
+	@GetMapping("/chapters/{pageNo}")
+	public String findPaginated(@PathVariable(value = "pageNo") int pageNo, @RequestParam("sortField") String sortField,
+			@RequestParam("sortDir") String sortDir, Model model) {
+		int pageSize = 30;
 
-	    Page < Chapter > page = chapterService.findPaginated(pageNo, pageSize, sortField, sortDir);
-	    List < Chapter > listChapters = page.getContent();
+		Page<Chapter> page = chapterService.findPaginated(pageNo, pageSize, sortField, sortDir);
+		List<Chapter> listChapters = page.getContent();
 
-	    model.addAttribute("currentPage", pageNo);
-	    model.addAttribute("totalPages", page.getTotalPages());
-	    model.addAttribute("totalItems", page.getTotalElements());
+		model.addAttribute("currentPage", pageNo);
+		model.addAttribute("totalPages", page.getTotalPages());
+		model.addAttribute("totalItems", page.getTotalElements());
 
-	    model.addAttribute("sortField", sortField);
-	    model.addAttribute("sortDir", sortDir);
-	    model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
+		model.addAttribute("sortField", sortField);
+		model.addAttribute("sortDir", sortDir);
+		model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 
-	    model.addAttribute("listChapters", listChapters);
-	    return "chapters";
+		model.addAttribute("listChapters", listChapters);
+		return "chapters";
 	}
 
 }

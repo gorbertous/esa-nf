@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 
 <title>ESA2010 Chapters Management</title>
@@ -23,7 +23,7 @@
 		<div id="layoutSidenav_content">
 
 			<!-- Left chapters navigation -->
-			<div th:replace="fragments/left :: left" />
+			<div th:replace="fragments/left-adm :: left-adm" />
 
 			<main>
 				<div class="container-fluid">
@@ -33,17 +33,17 @@
 						<div class="p-2 flex-fill">
 							<h1>Chapters List</h1>
 
-							<a th:href="@{/chapters/new}" class="btn btn-primary btn-sm mb-3">
+							<a th:href="@{/chapters/new}" class="btn btn-primary btn-sm mb-3 float-right">
 								Add Chapter </a>
 
 							<table class="table table-striped table-responsive-md">
 								<thead>
 									<tr>
 										<th><a
-											th:href="@{'/page/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
+											th:href="@{'/chapters/' + ${currentPage} + '?sortField=id&sortDir=' + ${reverseSortDir}}">
 												ID</a></th>
 										<th><a
-											th:href="@{'/page/' + ${currentPage} + '?sortField=title&sortDir=' + ${reverseSortDir}}">
+											th:href="@{'/chapters/' + ${currentPage} + '?sortField=title&sortDir=' + ${reverseSortDir}}">
 												Title</a></th>
 
 										<th>Actions</th>
@@ -54,12 +54,17 @@
 										<td th:text="${chapter.id}"></td>
 										<td th:text="${chapter.title}"></td>
 
-										<td><a th:href="@{/chapters/edit/{id}(id=${chapter.id})}"
-											class="btn btn-primary">Update</a> <a
-											th:href="@{/deleteChapter/{id}(id=${chapter.id})}"
-											class="btn btn-danger">Delete</a> <a
-											th:href="@{/chapter/view/{id}(id=${chapter.id})}"
-											class="btn btn-info">View</a></td>
+										<td>
+											<a th:href="@{/chapters/edit/{id}(id=${chapter.id})}"
+												class="btn btn-primary">Update
+											</a> 
+<!-- 											<a th:href="@{/deleteChapter/{id}(id=${chapter.id})}" -->
+<!-- 												class="btn btn-danger">Delete -->
+<!-- 											</a>  -->
+											<a th:href="@{/chapter/view/{id}(id=${chapter.id})}"
+												class="btn btn-info">View
+											</a>
+										</td>
 
 									</tr>
 								</tbody>
@@ -71,20 +76,20 @@
 									<div class="col-sm-1">
 										<span th:each="i: ${#numbers.sequence(1, totalPages)}">
 											<a th:if="${currentPage != i}"
-											th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+											th:href="@{'/chapters/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
 											<span th:unless="${currentPage != i}">[[${i}]]</span> &nbsp;
 											&nbsp;
 										</span>
 									</div>
 									<div class="col-sm-1">
 										<a th:if="${currentPage < totalPages}"
-											th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+											th:href="@{'/chapters/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
 										<span th:unless="${currentPage < totalPages}">Next</span>
 									</div>
 
 									<div class="col-sm-1">
 										<a th:if="${currentPage < totalPages}"
-											th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+											th:href="@{'/chapters/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
 										<span th:unless="${currentPage < totalPages}">Last</span>
 									</div>
 								</div>

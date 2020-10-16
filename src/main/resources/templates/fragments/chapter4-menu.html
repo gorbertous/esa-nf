@@ -1,459 +1,973 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-</head>
-<body>
-<div th:fragment="chapter4-menu">
+    <head>
+    </head>
+    <body>
+        <div th:fragment="chapter4-menu">
 
-    <a class="nav-link collapsed" href="" data-toggle="collapse"
-       data-target="#ch4collapsePages" aria-expanded="true"
-       aria-controls="ch4collapsePages">
-        <div class="sb-nav-link-icon">
-            <i class="fas fa-book-open"></i>
-        </div> Chapter 4
-        <div class="sb-sidenav-collapse-arrow">
-            <i class="fas fa-angle-down"></i>
-        </div>
-    </a>
-
-    <div class="collapse" id="ch4collapsePages"
-         aria-labelledby="ch4headingOne" data-parent="#sub-zero">
-        <!-- chapter header title -->
-        <nav class="sb-sidenav-menu-nested nav accordion" id="ch4-sub-1">
-            <a class="nav-link collapsed" href=""
-               data-toggle="collapse" data-target="#ch4-sub-2" aria-expanded="true"
-               aria-controls="ch4-sub-2">
-
+            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h153}" id="153" data-toggle="collapse"
+               data-target="#ch4collapsePages" aria-expanded="false"
+               aria-controls="ch4collapsePages">
                 <div class="sb-nav-link-icon">
-                    <i class="fas fa-stroopwafel text-info"></i>
-                </div> Distributive transactions
+                    <i class="fas fa-book-open"></i>
+                </div>4. Distributive transactions&nbsp;
                 <div class="sb-sidenav-collapse-arrow">
                     <i class="fas fa-angle-down"></i>
                 </div>
             </a>
 
-
-            <!--4.01 with sub elements-->
-            <div class="collapse show" id="ch4-sub-2" aria-labelledby="ch4headingTwo"
-                 data-parent="#ch4-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href=""
-                       data-toggle="collapse" data-target="#ch4-sub-3"
-                       aria-expanded="true" aria-controls="ch4-sub-3">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Compensation of employees (D.1)
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-
-                    <div class="collapse show" id="ch4-sub-3"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+            <div class="collapse" id="ch4collapsePages"
+                 aria-labelledby="ch4headingOne" data-parent="#sub-zero">
+                <nav class="nav accordion" id="ch4-sub-1">
+                    <!--4.01 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-4-1"
-                               aria-expanded="false" aria-controls="ch4-sub-4-1">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h155}" id="155" data-toggle="collapse"
+                               data-target="#ch4-sub-3" aria-expanded="true"
+                               aria-controls="ch4-sub-3">
                                 <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Wages and salaries (D.11)
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Compensation of employees (D.1)
                                 <div class="sb-sidenav-collapse-arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </div>
                             </a>
-                            <div class="collapse show" id="ch4-sub-4-1"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+
+                            <div class="collapse show" id="ch4-sub-3"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h156" id="156">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h156}" id="156" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-1" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-1">
                                         <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Wages and salaries in cash
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Wages and salaries (D.11)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-1"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h157}"
+                                               id="157">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Wages and salaries in cash
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-1"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h158}"
+                                               id="158">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Wages and salaries in kind
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <!--4.09 with sub elements-->
+                            <div class="collapse show" id="ch4-sub-3"
+                                 aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h159}" id="159" data-toggle="collapse"
+                                       data-target="#ch4-sub-3-1" aria-expanded="true"
+                                       aria-controls="ch4-sub-3-1">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Employers' social contributions (D.12)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+
+                                    <div class="collapse show" id="ch4-sub-3-1"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link " th:href="@{/chapter/view/4/#h160}"
+                                               id="160">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Employers' actual social contributions (D.121)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-3-1"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link " th:href="@{/chapter/view/4/#h161}"
+                                               id="161">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Employers' imputed social contributions (D.122)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--4.14 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h163}" id="162" data-toggle="collapse"
+                               data-target="#ch4-sub-3-2" aria-expanded="true"
+                               aria-controls="ch4-sub-3-2">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Taxes on production and imports (D.2)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <!--4.16 with sub elements-->
+                            <div class="collapse show" id="ch4-sub-3-2"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h164}" id="163" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-2" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-2">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Taxes on products (D.21)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-2"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-2">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h164}"
+                                               id="164">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Value added type taxes (VAT) (D.211)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-2"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-2">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h165}"
+                                               id="165">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Taxes and duties on imports excluding VAT (D.212)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-2"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-2">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h166}"
+                                               id="166">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Taxes on products, except VAT and import taxes (D.214)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-2"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link " th:href="@{/chapter/view/4/#h167}" id="167">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Other taxes on production (D.29)
                                     </a>
                                 </nav>
                             </div>
-                            <div class="collapse show" id="ch4-sub-4-1"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                            <div class="collapse show" id="ch4-sub-3-2"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h157" id="157">
+                                    <a class="nav-link " th:href="@{/chapter/view/4/#h168}" id="168">
                                         <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Wages and salaries in kind
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Taxes on production and imports paid to the institutions of
+                                        the European Union
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-2"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link " th:href="@{/chapter/view/4/#h169}" id="169">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Taxes on production and imports: time of recording and amounts
+                                        to be recorded
                                     </a>
                                 </nav>
                             </div>
                         </nav>
                     </div>
 
-                    <!--4.09 with sub elements-->
-                    <div class="collapse show" id="ch4-sub-3" aria-labelledby="ch4headingTwo"
-                         data-parent="#ch4-sub-2">
+                    <!--4.30 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-3-one"
-                               aria-expanded="true" aria-controls="ch4-sub-3-one">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h170}" id="170" data-toggle="collapse"
+                               data-target="#ch4-sub-3-3" aria-expanded="true"
+                               aria-controls="ch4-sub-3-3">
                                 <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Employers' social contributions (D.12)
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Subsidies (D.3)
                                 <div class="sb-sidenav-collapse-arrow">
                                     <i class="fas fa-angle-down"></i>
                                 </div>
                             </a>
-
-                            <div class="collapse show" id="ch4-sub-3-one"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                            <!--4.16 with sub elements-->
+                            <div class="collapse show" id="ch4-sub-3-3"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link " href="/chapter/view/4/#h160" id="160">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h171}" id="171" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-3" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-3">
                                         <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Employers' actual social contributions (D.121)
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Subsidies on products (D.31)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
                                     </a>
+                                    <div class="collapse show" id="ch4-sub-4-3"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h172}"
+                                               id="172">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Import subsidies (D.311)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-3"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-3">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h173}"
+                                               id="173">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Other subsidies on products (D.319)
+                                            </a>
+                                        </nav>
+                                    </div>
                                 </nav>
                             </div>
-                            <div class="collapse show" id="ch4-sub-3-one"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3">
+                            <div class="collapse show" id="ch4-sub-3-3"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link " href="/chapter/view/4/#h160" id="160">
+                                    <a class="nav-link " th:href="@{/chapter/view/4/#h174}" id="174">
                                         <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Employers' imputed social contributions (D.122)
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Other subsidies on production (D.39)
                                     </a>
                                 </nav>
                             </div>
                         </nav>
                     </div>
+
+                    <!--4.41 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h175}" id="175" data-toggle="collapse"
+                               data-target="#ch4-sub-3-4" aria-expanded="true"
+                               aria-controls="ch4-sub-3-4">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Property income (D.4)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <!--4.42 with sub elements-->
+                            <div class="collapse show" id="ch4-sub-3-4"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h176}" id="176" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-4" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-4">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Interest (D.41)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h177}"
+                                               id="177">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Interest on deposits and loans
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h178}" id="178" data-toggle="collapse"
+                                               data-target="#ch4-sub-5-1" aria-expanded="false"
+                                               aria-controls="ch4-sub-5-1">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Interest on debt securities
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch4-sub-5-1"
+                                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-4-4">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/4/#h179}"
+                                                       id="179">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Interest on bills and similar short-term instruments
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch4-sub-5-1"
+                                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-4-4">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/4/#h180}"
+                                                       id="180">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Interest on bonds and debentures
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h181}"
+                                               id="181">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Interest rate swaps and forward rate agreements
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h182}"
+                                               id="182">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Interest on financial leases
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h183}"
+                                               id="183">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Other interest
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-4"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h184}"
+                                               id="184">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Time of recording
+                                            </a>
+                                        </nav>
+                                    </div>
+
+
+                                </nav>
+                            </div>
+
+                            <div class="collapse show" id="ch4-sub-3-4"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h185}" id="185" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-5" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-5">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Distributed income of corporations (D.42)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-5"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h186}"
+                                               id="186">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Dividends (D.421)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-5"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h187}"
+                                               id="187">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Withdrawals from the income of quasi-corporations (D.422)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="collapse show" id="ch4-sub-3-4"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h188}" id="188">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Reinvested earnings on foreign direct investment (D.43)
+                                    </a>
+                                </nav>
+                            </div>
+
+                            <div class="collapse show" id="ch4-sub-3-4"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h189}" id="189" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-6" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-6">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Other investment income (D.44)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-6"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h190}"
+                                               id="190">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Investment income attributable to insurance policy holders
+                                                (D.441)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-6"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h191}"
+                                               id="191">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Investment income payable on pension entitlements (D.442)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-6"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h192}"
+                                               id="192">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Investment income attributable to collective investment fund
+                                                shareholders (D.443)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="collapse show" id="ch4-sub-3-4"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h193}" id="193" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-7" aria-expanded="false"
+                                       aria-controls="ch4-sub-4-7">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Rent (D.45)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-7"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h194}"
+                                               id="194">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Rent on land
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-7"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-4">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h195}"
+                                               id="195">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Rents on subsoil assets
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--4.77 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h196}" id="196" data-toggle="collapse"
+                               data-target="#ch4-sub-3-5" aria-expanded="true"
+                               aria-controls="ch4-sub-3-5">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Current taxes on income, wealth, etc. (D.5)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse show" id="ch4-sub-3-5"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h197}" id="197">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Taxes on income (D.51)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-5"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h198}" id="198">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Other current taxes (D.59)
+                                    </a>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--4.83 with sub elements-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h199}" id="199" data-toggle="collapse"
+                               data-target="#ch4-sub-3-6" aria-expanded="true"
+                               aria-controls="ch4-sub-3-6">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Social contributions and benefits (D.6)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse show" id="ch4-sub-3-6"
+                                 aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h200}" id="200" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-9" aria-expanded="true"
+                                       aria-controls="ch4-sub-4-9">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Net social contributions (D.61)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-9"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h201}"
+                                               id="201">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Employers' actual social contributions (D.611)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-9"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h202}"
+                                               id="202">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Employers' imputed social contributions (D.612)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-9"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h203}"
+                                               id="203">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Households' actual social contributions (D.613)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-9"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h204}"
+                                               id="204">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Households' social contribution supplements (D.614)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+
+                            <div class="collapse show" id="ch4-sub-3-6"
+                                 aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h205}" id="205" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-10" aria-expanded="true"
+                                       aria-controls="ch4-sub-4-10">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Social benefits other than social transfers in kind (D.62)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-10"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h206}"
+                                               id="206">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Social security benefits in cash (D.621)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-10"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h207}"
+                                               id="207">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Other social insurance benefits (D.622)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-10"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h208}"
+                                               id="208">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Social assistance benefits in cash (D.623)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <div class="collapse show" id="ch4-sub-3-6"
+                                 aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h209}" id="209" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-11" aria-expanded="true"
+                                       aria-controls="ch4-sub-4-11">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Social transfers in kind (D.63)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-11"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#p1122}"
+                                               id="1122">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Social transfers in kind &mdash; general government and
+                                                NPISHs non-market production (D.631)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-11"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-6">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#p1124}"
+                                               id="1124">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Social transfers in kind &mdash; market production purchased
+                                                by general government and NPISHs (D.632)
+                                            </a>
+                                        </nav>
+                                    </div>
+
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <!--  Other current transfers (D.7)-->
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h210}" id="210" data-toggle="collapse"
+                               data-target="#ch4-sub-3-7" aria-expanded="true"
+                               aria-controls="ch4-sub-3-7">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Other current transfers (D.7)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse show" id="ch4-sub-3-7"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h211}" id="211">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Net non-life insurance premiums (D.71)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-7"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h212}" id="212">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Non-life insurance claims (D.72)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-7"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h213}" id="213">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Current transfers within general government (D.73)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-7"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h214}" id="214">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Current international cooperation (D.74)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-7"
+                                 aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h215}" id="215" data-toggle="collapse"
+                                       data-target="#ch4-sub-4-12" aria-expanded="true"
+                                       aria-controls="ch4-sub-4-12">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel text-info"></i>
+                                        </div> Miscellaneous current transfers (D.75)
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse show" id="ch4-sub-4-12"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-7">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h216}"
+                                               id="216">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Current transfers to NPISHs (D.751)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-12"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-7">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h217}"
+                                               id="217">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> Current transfers between households (D.752)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="collapse show" id="ch4-sub-4-12"
+                                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-2">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h218}" id="218" data-toggle="collapse"
+                                               data-target="#ch4-sub-5-2" aria-expanded="true"
+                                               aria-controls="ch4-sub-5-2">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel text-success"></i>
+                                                </div> Other miscellaneous current transfers (D.759)
+                                                <div class="sb-sidenav-collapse-arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </div>
+                                            </a>
+                                            <div class="collapse show" id="ch4-sub-5-2"
+                                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-4-12">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/4/#h219}"
+                                                       id="219">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Fines and penalties
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch4-sub-5-2"
+                                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-4-12">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/4/#h220}"
+                                                       id="220">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Lotteries and gambling
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                            <div class="collapse show" id="ch4-sub-5-2"
+                                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-4-12">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" th:href="@{/chapter/view/4/#h221}"
+                                                       id="221">
+                                                        <div class="sb-nav-link-icon">
+                                                            <i class="fas fa-stroopwafel nav-icon text-danger"></i>
+                                                        </div> Payments of compensation
+                                                    </a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+
+                                    <div class="collapse show" id="ch4-sub-4-12"
+                                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-7">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" th:href="@{/chapter/view/4/#h222}"
+                                               id="222">
+                                                <div class="sb-nav-link-icon">
+                                                    <i class="fas fa-stroopwafel nav-icon text-success"></i>
+                                                </div> VAT- and GNI-based EU own resources (D.76)
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" th:href="@{/chapter/view/4/#h223}" id="223">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel nav-icon text-warning"></i>
+                                </div> Adjustment for the change in pension entitlements (D.8)
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link collapsed" th:href="@{/chapter/view/4/#h224}" id="224" data-toggle="collapse"
+                               data-target="#ch4-sub-3-8" aria-expanded="true"
+                               aria-controls="ch4-sub-3-8">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel text-warning"></i>
+                                </div> Capital transfers (D.9)
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse show" id="ch4-sub-3-8"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h225}" id="225">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Capital taxes (D.91)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-8"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h226}" id="226">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Investment grants (D.92)
+                                    </a>
+                                </nav>
+                            </div>
+                            <div class="collapse show" id="ch4-sub-3-8"
+                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/chapter/view/4/#h227}" id="227">
+                                        <div class="sb-nav-link-icon">
+                                            <i class="fas fa-stroopwafel nav-icon text-info"></i>
+                                        </div> Other capital transfers (D.99)
+                                    </a>
+                                </nav>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <div class="collapse show" id="ch4-sub-2"
+                         aria-labelledby="ch4headingTwo" data-parent="#ch4-sub-1">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" th:href="@{/chapter/view/4/#h228}" id="228">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-stroopwafel nav-icon text-warning"></i>
+                                </div> Employee stock options (ESOs)
+                            </a>
+                        </nav>
+                    </div>
+
                 </nav>
             </div>
-
-            <!--4.14 with sub elements-->
-            <div class="collapse show" id="ch4-sub-2" aria-labelledby="ch4headingTwo"
-                 data-parent="#ch4-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href=""
-                       data-toggle="collapse" data-target="#ch4-sub-3-two"
-                       aria-expanded="true" aria-controls="ch4-sub-3-two">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Taxes on production and imports (D.2)
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-                    <!--4.16 with sub elements-->
-                    <div class="collapse show" id="ch4-sub-3-two"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-4-2"
-                               aria-expanded="false" aria-controls="ch4-sub-4-2">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Taxes on products (D.21)
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse show" id="ch4-sub-4-2"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-two">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h164" id="164">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Value added type taxes (VAT) (D.211)
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-2"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-two">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h165" id="165">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Taxes and duties on imports excluding VAT (D.212)
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-2"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-two">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h166" id="166">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Taxes on products, except VAT and import taxes (D.214)
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch4-sub-3-two"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/4/#h167" id="167">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-danger"></i>
-                                </div> Other taxes on production (D.29)
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch4-sub-3-two"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/4/#h168" id="168">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-danger"></i>
-                                </div> Taxes on production and imports paid to the institutions of the European Union
-                            </a>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch4-sub-3-two"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/4/#h168" id="168">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-danger"></i>
-                                </div> Taxes on production and imports: time of recording and amounts to be recorded
-                            </a>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
-
-            <!--4.30 with sub elements-->
-            <div class="collapse show" id="ch4-sub-2" aria-labelledby="ch4headingTwo"
-                 data-parent="#ch4-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href=""
-                       data-toggle="collapse" data-target="#ch4-sub-3-three"
-                       aria-expanded="true" aria-controls="ch4-sub-3-three">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Subsidies (D.3)
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-                    <!--4.16 with sub elements-->
-                    <div class="collapse show" id="ch4-sub-3-three"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-4-3"
-                               aria-expanded="false" aria-controls="ch4-sub-4-3">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Subsidies on products (D.31)
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse show" id="ch4-sub-4-3"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-three">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h172" id="172">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Import subsidies (D.311)
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-3"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-three">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h173" id="173">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Other subsidies on products (D.319)
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="collapse show" id="ch4-sub-3-three"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link " href="/chapter/view/4/#h174" id="174">
-                                <div class="sb-nav-link-icon">
-                                    <i class="far fa-dot-circle nav-icon text-danger"></i>
-                                </div> Other subsidies on production (D.39)
-                            </a>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
-            
-            <!--4.41 with sub elements-->
-            <div class="collapse show" id="ch4-sub-2" aria-labelledby="ch4headingTwo"
-                 data-parent="#ch4-sub-1">
-                <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link collapsed" href=""
-                       data-toggle="collapse" data-target="#ch4-sub-3-four"
-                       aria-expanded="true" aria-controls="ch4-sub-3-four">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-stroopwafel text-warning"></i>
-                        </div> Property income (D.4)
-                        <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                    </a>
-                    <!--4.42 with sub elements-->
-                    <div class="collapse show" id="ch4-sub-3-four"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-4-4"
-                               aria-expanded="false" aria-controls="ch4-sub-4-4">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Interest (D.41)
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h177" id="177">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on deposits and loans
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h178" id="178">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on debt securities
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h181" id="181">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest rate swaps and forward rate agreements
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h182" id="182">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on financial leases
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h183" id="183">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Other interest
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-4"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h184" id="184">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Time of recording
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                    
-                    
-                     <!--4.53 with sub elements-->
-                    <div class="collapse show" id="ch4-sub-3-four"
-                         aria-labelledby="ch4headingThree" data-parent="#ch4-sub-2">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link collapsed" href=""
-                               data-toggle="collapse" data-target="#ch4-sub-4-5"
-                               aria-expanded="false" aria-controls="ch4-sub-4-5">
-                                <div class="sb-nav-link-icon">
-                                    <i class="fas fa-stroopwafel text-danger"></i>
-                                </div> Distributed income of corporations (D.42)
-                                <div class="sb-sidenav-collapse-arrow">
-                                    <i class="fas fa-angle-down"></i>
-                                </div>
-                            </a>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h177" id="177">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on deposits and loans
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h178" id="178">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on debt securities
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h181" id="181">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest rate swaps and forward rate agreements
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h182" id="182">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Interest on financial leases
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h183" id="183">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Other interest
-                                    </a>
-                                </nav>
-                            </div>
-                            <div class="collapse show" id="ch4-sub-4-5"
-                                 aria-labelledby="ch4headingThree" data-parent="#ch4-sub-3-four">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/chapter/view/4/#h184" id="184">
-                                        <div class="sb-nav-link-icon">
-                                            <i class="far fa-dot-circle nav-icon text-info"></i>
-                                        </div> Time of recording
-                                    </a>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                </nav>
-            </div>
-            
-            
-            
-        </nav>
-    </div>
-</div>
-</body>
+        </div>
+    </body>
 </html>

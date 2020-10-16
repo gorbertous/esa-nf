@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+</head>
+<body>
+	<div th:fragment="left-adm">
+
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark elevation-4"
+				id="sub-zero">
+				<div class="sb-sidenav-menu">
+					<div class="nav adm-links">
+
+						<div class="sb-sidenav-menu-heading">Admin</div>
+
+
+						<a class="nav-link" th:href="@{/chapters}">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-stroopwafel nav-icon text-info"></i>
+							</div> Chapters
+						</a> <a class="nav-link" th:href="@{/terms}">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-stroopwafel nav-icon text-info"></i>
+							</div> Definitions
+						</a> <a class="nav-link" th:href="@{/registration}">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-stroopwafel nav-icon text-info"></i>
+							</div> Registration
+						</a>
+						<div sec:authorize="isAuthenticated()">
+							<a class="nav-link" th:href="@{/logout}">
+								<div class="sb-nav-link-icon">
+									<i class="fas fa-stroopwafel nav-icon text-info"></i>
+								</div> Logout
+							</a>
+						</div>
+
+					</div>
+				</div>
+				<div sec:authorize="isAuthenticated()">
+
+					<div class="sb-sidenav-footer">
+						<div class="small">
+
+							Authenticated user roles: Logged user: <span
+								sec:authentication="name"></span> | Roles: <span
+								sec:authentication="principal.authorities"></span>
+
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+</body>
+</html>

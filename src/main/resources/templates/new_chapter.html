@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 
 <title>ESA2010 Chapters</title>
@@ -23,39 +23,28 @@
 		<div id="layoutSidenav_content">
 			
 			<!-- Left chapters navigation -->
-			<div th:replace="fragments/left :: left"/>
+		   	<div th:replace="fragments/left-adm :: left-adm"/>
 			
 			<main>
-				<div class="container-fluid">
-					
-					<!-- Acronymns -->
-					<div th:replace="fragments/acronymns :: acronymns"/>
-					
-					<!-- New Chapter Form -->
-					<div class="container">
-						
-						<h2>New Chapter</h2>
 				
-						<form action="#" th:action="@{/saveChapter}" th:object="${chapter}"
-							method="POST">
-							<input type="text" th:field="*{title}"
-								placeholder="Title" class="form-control mb-4 col-12">
-								
-<!-- 								<input type="text" th:field="*{htmltext}" -->
-<!-- 								placeholder="Text" class="form-control mb-4 col-12"> -->
-								
-								<textarea rows="10" th:field="*{htmltext}" placeholder="Text" class="form-control mb-4 col-12"></textarea>
+				<!-- New Chapter Form -->
+				<div class="container float-left py-4">
+					
+					<h2>New Chapter</h2>
+			
+					<form action="#" th:action="@{/saveChapter}" th:object="${chapter}"
+						method="POST">
+						<input type="text" th:field="*{title}"
+							placeholder="Title" class="form-control mb-4 col-12">
 							
-								
-								<button type="submit" class="btn btn-info col-2"> Save Chapter</button>
-						</form>
+							<textarea rows="20" th:field="*{htmltext}" placeholder="Text" class="form-control mb-4 col-12"></textarea>
 						
-						<hr>
-						
-						<a th:href = "@{/chapters}"> Back to Chapter List</a>
-					</div>
-
+							
+							<button type="submit" class="btn btn-info col-2"> Save Chapter</button>
+					</form>
+					
 				</div>
+				
 			</main>
 
 

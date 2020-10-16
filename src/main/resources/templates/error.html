@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <!-- Header CSS -->
-		<div th:replace="fragments/header-css :: header-css"/>
-    </head>
-    <body th:with="httpStatus=${T(org.springframework.http.HttpStatus).valueOf(#response.status)}">
-        <h1 th:text="|${httpStatus} - ${httpStatus.reasonPhrase}|">404</h1>
-        <p th:utext="${errorMessage}">Error java.lang.NullPointerException</p>
-        <a href="index.html" th:href="@{/index}">Back to Home Page</a>
-    </body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Error 404</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css" />
+
+</head>
+<body class="sb-nav-fixed" th:with="httpStatus=${T(org.springframework.http.HttpStatus).valueOf(#response.status)}">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar" />
+
+
+		<div id="layoutSidenav_content">
+
+			<main>
+			
+				<div class="container-fluid">
+				
+					
+					<div class="d-flex">
+						
+						
+						<!-- Chapter Text -->
+						<div class="p-2 flex-fill card-main">
+							
+							<h1 th:text="|${httpStatus} - ${httpStatus.reasonPhrase}|">404</h1>
+					        <p th:utext="${errorMessage}">Error java.lang.NullPointerException</p>
+					        <a href="index.html" th:href="@{/chapter/view/1}">Back to Chapters</a>
+							
+							
+						</div>
+						
+						
+					</div>
+
+				</div>
+			</main>
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer" />
+			
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js" />
+	
+</body>
 </html>

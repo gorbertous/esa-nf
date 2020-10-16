@@ -1,6 +1,24 @@
 (function($) {
 	"use strict";
 
+	// This will capture hash changes while on the page
+	$(window).on("hashchange", function() {
+		offsetAnchor();
+	});
+
+
+	// The function actually applying the offset
+	function offsetAnchor() {
+		if (location.hash.length !== 0) {
+			sessionStorage.setItem("currenturl_hash_change", window.location.href);
+			window.scrollTo(window.scrollX, window.scrollY - 100);
+//			alert(sessionStorage.getItem("currenturl_hash_change"));
+		}
+	}
+
+	// Set the offset when entering page with hash present in the url
+	window.setTimeout(offsetAnchor, 0);
+
 	// set active class on clicked element
 	$("#layoutSidenav_nav .nav .nav-link").on("click", function(e) {
 
@@ -15,7 +33,18 @@
 				url.lastIndexOf("/")
 			);
 
-			window.sessionStorage.setItem("chapter_id", chapterId);
+			sessionStorage.setItem("chapter_id", chapterId);
+			sessionStorage.setItem("currenturl_hash_change", url);
+			
+			
+			//set timeout for collapse elements
+			if (this.classList.contains('collapsed')) {
+			    
+				var tID = setTimeout(function () {
+		            location.href = url;
+		            clearTimeout(tID);		// clear time out.
+		        }, 500);
+			}
 
 		}
 
@@ -23,12 +52,15 @@
 
 			var hash_id = somehash.substring(2);
 			$(".nav").find(".active").removeClass("active");
+
 			if (this.id === hash_id) {
 
-				window.sessionStorage.setItem("anchor_id", this.id);
+				sessionStorage.setItem("anchor_id", this.id);
 				$(this).addClass("active");
+
 			}
 		}
+		
 
 	});
 
@@ -44,16 +76,27 @@
 	});
 
 	// add active to sidebar navigation link
-	if (window.sessionStorage.getItem("anchor_id") !== void (0)) {
-		var selected_link = window.sessionStorage.getItem("anchor_id");
-		$("#" + selected_link).addClass("active");
+	var selected_link = 0
+	if (sessionStorage.getItem("anchor_id") !== void (0)) {
+		
+		selected_link = sessionStorage.getItem("anchor_id");
+		if(selected_link > 0){
+			$("#" + selected_link).addClass("active");
+		}
+
 	}
 
 	// expand chapter elements based on clicked chapter id
-	if (window.sessionStorage.getItem("chapter_id") !== void (0)) {
-		var id = window.sessionStorage.getItem("chapter_id");
-		$("#ch" + id + "collapsePages").addClass("show");
+	var expand_id = 0
+	if (sessionStorage.getItem("chapter_id") !== void (0)) {
+		expand_id = sessionStorage.getItem("chapter_id");
+		if(expand_id > 0){
+			$("#ch" + expand_id + "collapsePages").addClass("show");
+		}
 	}
+	
 
 })(jQuery);
+
+
 

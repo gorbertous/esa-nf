@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+<title>New Definition</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css"/>
+
+</head>
+<body class="sb-nav-fixed">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+		
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar"/>
+
+
+		<div id="layoutSidenav_content">
+			
+			<!-- Left chapters navigation -->
+		   	<div th:replace="fragments/left-adm :: left-adm"/>
+			
+			<main>
+				
+				<!-- New Chapter Form -->
+				<div class="container float-left py-4">
+					
+					<h2>New Definition</h2>
+			
+					<form action="#" th:action="@{/saveTerm}" th:object="${term}"
+							method="POST">
+						
+							
+							<input type="text" th:field="*{title}" class="form-control mb-4 col-12">
+							<input type="text" th:field="*{code}" class="form-control mb-4 col-12">
+							<input type="text" th:field="*{paragraph}" class="form-control mb-4 col-12">
+							
+							<textarea rows="10" th:field="*{definition}" class="form-control mb-4 col-12"></textarea>
+								
+							<button type="submit" class="btn btn-info col-2"> Save Definition</button>
+					</form>
+					
+					
+				</div>
+				
+			</main>
+
+
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer"/>
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js"/>
+</body>
+</html>
