@@ -1,10 +1,14 @@
 package eu.europa.ec.estat.esa.controller;
 
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 //import java.util.Arrays;
 
 //import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.Authentication;
 //import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -14,14 +18,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 //import org.springframework.web.bind.annotation.ModelAttribute;
 
 //import eu.europa.ec.estat.esa.model.User;
-import eu.europa.ec.estat.esa.repository.UserRepository;
+//import eu.europa.ec.estat.esa.repository.UserRepository;
 //import eu.europa.ec.estat.esa.web.UserRegistrationDto;
 
 @Controller
 public class MainController {
 
-	@Autowired
-	UserRepository userR;
+//	@Autowired
+//	UserRepository userR;
 
 	@GetMapping(value = { "/", "/index" })
 	public String index(Model model) {
@@ -30,7 +34,19 @@ public class MainController {
 
 	@GetMapping("/login")
 	public String login(Model model) {
+		if (isAuthenticated()) {
+	        return "redirect:chapters";
+	    }
 		return "login";
+	}
+	
+	private boolean isAuthenticated() {
+	    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	    if (authentication == null || AnonymousAuthenticationToken.class.
+	      isAssignableFrom(authentication.getClass())) {
+	        return false;
+	    }
+	    return authentication.isAuthenticated();
 	}
 
 //	@GetMapping
@@ -60,13 +76,13 @@ public class MainController {
 //    }
 	
 
-	@GetMapping("/user")
-	public String userIndex() {
-		return "user/index";
-	}
+//	@GetMapping("/user")
+//	public String userIndex() {
+//		return "user/index";
+//	}
 
 	@GetMapping("/403")
 	public String error403() {
-		return "/error/403";
+		return "403";
 	}
 }

@@ -46,7 +46,7 @@
                     head: "<x:ExcelWorksheet><x:Name>",
                     tail: "</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet>"
                 },
-                mid: "</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><img src='https://ec.europa.eu/eurostat/statistics-explained/images/2/28/Eurostat_logo_RGB_60.jpg' style='float:left;clear:none;margin-right:50px' height=50 width=100/>",
+                mid: "</x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><img src='https://ec.europa.eu/eurostat/statistics-explained/images/0/09/Logo_RGB-POS.png' style='float:left;clear:none;margin-right:50px' height=50 />",
                 table: {
                     head: "<table>",
                     tail: "</table>"

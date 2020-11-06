@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+<title>New User</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css" />
+
+</head>
+<body class="sb-nav-fixed">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar" />
+
+
+		<div id="layoutSidenav_content">
+
+			<!-- Left chapters navigation -->
+			<div th:replace="fragments/left-adm :: left-adm" />
+
+			<main>
+
+				<!-- New Chapter Form -->
+				<div class="container float-left py-4">
+
+					<h2>New User</h2>
+
+					<form action="#" th:action="@{/saveUser}" th:object="${user}"
+						method="POST">
+						<p class="error-message" th:if="${#fields.hasGlobalErrors()}"
+							th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation
+							error</p>
+
+						<label for="firstName">First Name:</label> <input type="text"
+							th:field="*{firstName}" class="form-control mb-4 col-6">
+						<p th:each="error: ${#fields.errors('firstName')}"
+							th:text="${error}">Validation error</p>
+
+
+						<label for="lastName">Last Name:</label> <input type="text"
+							th:field="*{lastName}" class="form-control mb-4 col-6">
+						<p class="text-danger"
+							th:each="error : ${#fields.errors('lastName')}"
+							th:text="${error}">Validation error</p>
+
+
+						<label for="email">Email:</label> <input type="text"
+							th:field="*{email}" class="form-control mb-4 col-6">
+						<p class="text-danger"
+							th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation
+							error</p>
+
+
+						<label for="password">Password:</label> <input type="password"
+							th:field="*{password}" class="form-control mb-4 col-6">
+						<p th:each="error : ${#fields.errors('password')}"
+							th:text="${error}">Validation error</p>
+
+
+						<label for="matchingPassword">Confirm Password:</label> <input
+							type="password" th:field="*{matchingPassword}"
+							class="form-control mb-4 col-6">
+
+
+
+						<button type="submit" class="btn btn-info col-2">Save
+							User</button>
+					</form>
+
+
+				</div>
+
+			</main>
+
+
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer" />
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js" />
+</body>
+</html>

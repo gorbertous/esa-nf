@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
 
 <title><span th:text="${chapter.title}" th:remove="tag"></span></title>
@@ -8,7 +10,10 @@
 <div th:replace="fragments/header-css :: header-css" />
 
 </head>
-<body class="sb-nav-fixed">
+<body class="sb-nav-fixed" onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
 
 	<!-- this is header -->
 
@@ -22,7 +27,7 @@
 
 			<main>
 			
-				<div class="container-fluid float-left py-4">
+				<div class="container-fluid float-left py-1">
 				
 					<!-- Left chapters navigation -->
 					<div th:replace="fragments/left :: left" />
@@ -31,20 +36,28 @@
 						
 						
 						<!-- Chapter Text -->
-						<div class="p-2 flex-fill card-main">
+						<div class="card-main" style="display:none;">
+							<div class="p-2 flex-fill animate-bottom">
+								<div sec:authorize="isAuthenticated()">
+									<a th:href="@{/chapters/edit/{id}(id=${chapter.id})}"
+													class="btn btn-primary">Update
+												</a> 
+								</div>
+								
+								<!-- Chapter HTML -->
+								<div th:utext="${chapter.htmltext}"></div>
 							
-							<!-- Chapter HTML -->
-							<div th:utext="${chapter.htmltext}"></div>
-							
-							
+							</div>
 						</div>
+						
 						<div class="p-2 acronynm">
-							
-							<!-- Acronymns -->
+						
+    						<!-- Acronymns -->
 							<div th:replace="fragments/acronymns :: acronymns" />
-							
+
 							
 						</div>
+						
 						<!-- contact, social icons -->
 						<div th:replace="fragments/contact :: contact" />
 						
@@ -61,6 +74,21 @@
 
 	</div>
 	<!-- Footer JS -->
+	
 	<div th:replace="fragments/footer-js :: footer-js" />
+	
+	<script>
+		var myVar;
+		
+		function myFunction() {
+		  myVar = setTimeout(showPage, 500);
+		}
+		
+		function showPage() {
+		  document.getElementById("loader").style.display = "none";
+		  document.getElementsByClassName("card-main")[0].style.display = "block";
+		  
+		}
+	</script>
 </body>
 </html>

@@ -32,11 +32,12 @@
 					
 					<h2>New Chapter</h2>
 			
-					<form action="#" th:action="@{/saveChapter}" th:object="${chapter}"
-						method="POST">
-						<input type="text" th:field="*{title}"
-							placeholder="Title" class="form-control mb-4 col-12">
+					<form action="#" th:action="@{/saveChapter}" th:object="${chapter}" method="POST">
 							
+							<label for="title">Title:</label>
+							<input type="text" th:field="*{title}"
+							placeholder="Title" class="form-control mb-4 col-12">
+							<label for="title">Chapter HTML Text:</label>
 							<textarea rows="20" th:field="*{htmltext}" placeholder="Text" class="form-control mb-4 col-12"></textarea>
 						
 							

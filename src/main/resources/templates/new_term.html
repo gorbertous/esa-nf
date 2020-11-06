@@ -35,12 +35,16 @@
 					<form action="#" th:action="@{/saveTerm}" th:object="${term}"
 							method="POST">
 						
-							
+							<label for="title">Term:</label>
 							<input type="text" th:field="*{title}" class="form-control mb-4 col-12">
+							<label for="code">Code:</label>
 							<input type="text" th:field="*{code}" class="form-control mb-4 col-12">
+							<label for="paragraph">Paragraph:</label>
 							<input type="text" th:field="*{paragraph}" class="form-control mb-4 col-12">
-							
+							<label for="definition">Definition:</label>
 							<textarea rows="10" th:field="*{definition}" class="form-control mb-4 col-12"></textarea>
+							<label for="defjs">JS Snippet:</label>
+							<textarea rows="10" th:field="*{defjs}" class="form-control mb-4 col-12"></textarea>
 								
 							<button type="submit" class="btn btn-info col-2"> Save Definition</button>
 					</form>

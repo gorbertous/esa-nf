@@ -11,29 +11,52 @@
 			<nav class="sb-sidenav accordion sb-sidenav-dark elevation-4"
 				id="sub-zero">
 				<div class="sb-sidenav-menu">
-					<div class="nav adm-links">
+					<div class="nav">
 
 						<div class="sb-sidenav-menu-heading">Admin</div>
 
 
-						<a class="nav-link" th:href="@{/chapters}">
+						<a class="nav-link" th:href="@{/chapters}" id=1000>
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-stroopwafel nav-icon text-info"></i>
+								<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
 							</div> Chapters
-						</a> <a class="nav-link" th:href="@{/terms}">
+						</a> 
+						
+						<a class="nav-link" th:href="@{/terms}" id=2000>
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-stroopwafel nav-icon text-info"></i>
+								<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
 							</div> Definitions
-						</a> <a class="nav-link" th:href="@{/registration}">
+						</a> 
+						
+						</a> <a class="nav-link" th:href="@{/footnotes}" id=3000>
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-stroopwafel nav-icon text-info"></i>
-							</div> Registration
+								<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
+							</div> Footnotes
+						</a>
+						
+						</a> <a class="nav-link" th:href="@{/links}" id=4000>
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
+							</div> Links
+						</a>
+						
+						<a class="nav-link" th:href="@{/users}" id=5000>
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
+							</div> Users
 						</a>
 						<div sec:authorize="isAuthenticated()">
 							<a class="nav-link" th:href="@{/logout}">
 								<div class="sb-nav-link-icon">
-									<i class="fas fa-stroopwafel nav-icon text-info"></i>
+									<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
 								</div> Logout
+							</a>
+						</div>
+						<div sec:authorize="isAnonymous()">
+							<a class="nav-link" th:href="@{/login}">
+								<div class="sb-nav-link-icon">
+									<i class="fas fa-stroopwafel nav-icon text-aqua"></i>
+								</div> Login
 							</a>
 						</div>
 

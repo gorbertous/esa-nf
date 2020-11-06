@@ -37,7 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .antMatchers(
                     		"/",
                     		"/index",
-                            "/registration**",
+                    		"/home",
                             "/chapters**",
                             "/definitions**",
                             "/chapter/view/**",
@@ -52,6 +52,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         .loginPage("/login")
                         .loginProcessingUrl("/login")
                         .successHandler(new CustomAuthenticationSuccessHandler())
+                        	.defaultSuccessUrl("/chapters", true)
                             .permitAll()
                 .and()
                     .logout()

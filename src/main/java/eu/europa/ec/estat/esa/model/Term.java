@@ -38,6 +38,9 @@ public class Term {
 	
 	@Column(name = "term_definition")
 	private String definition;
+	
+	@Column(name = "term_defjs")
+	private String defjs;
 
 	
 

@@ -1,5 +1,22 @@
 $(function() {
+	
+	function appendRow(table_to_append,table_title) {
+		
+	  	var table = document.getElementById(table_to_append);
+		var row = table.insertRow(0);
+	  	
+		var cell = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		row.style.visibility = 'hidden';
+	  	cell.innerHTML = table_title;
+		cell2.innerHTML = "";
 
+//		var img = document.createElement('img');
+//	    img.src = "http://"  + window.location.host + "/esa-nf/img/eurostat_logo_sm.png";
+//	    cell2.appendChild(img);
+
+	}
+	
 	//chapter tables
 	let tables = ["11", "21", "22", "23", "24", "25", "26", "31", "32", "33", "34", "51", "52", "53", "54", "70", "71", "72", "73", "74", "75",
 		"81", "82", "83", "84", "851", "852", "86", "87", "88", "89", "810", "811", "812", "813", "8140", "8141", "8142", "8150", "8151",
@@ -12,8 +29,8 @@ $(function() {
 		"2455", "2456", "2457", "2458", "2459", "2460", "2461", "2462", "2463", "2464", "2465", "2466", "2467", "2468", "2469", "2470",
 		"2471", "2472", "2473", "2474", "2475", "2476", "2477", "2478", "2479", "2480", "2481", "2482", "2483", "2484", "2485", "2486",
 		"2487", "2488", "2489", "2490", "2491", "2492", "2493", "2494", "2495", "2496", "2497", "2498", "2499", "24100", "24101", "24102",
-		"24103", "24104", "24105", "24106", "24107", "24108", "24109", "24110", "24111", "24112", "24113", "24114","24115", "24116",
-		"24118","24119", "24120", "24121", "24122", "24123", "24124","24125", "261", "262", "263", "264", "265", "266", "267", "268", "269", "2610", "2611",
+		"24103", "24104", "24105", "24106", "24107", "24108", "24109", "24110", "24111", "24112", "24113", "24114", "24115", "24116",
+		"24118", "24119", "24120", "24121", "24122", "24123", "24124", "24125", "261", "262", "263", "264", "265", "266", "267", "268", "269", "2610", "2611",
 		"2612", "2613", "2614", "2615", "2616", "2617", "2618", "2619", "2620", "2621", "2622", "2623", "2624", "2625", "2626", "2627", "2628", "2629"];
 
 
@@ -21,26 +38,31 @@ $(function() {
 
 		$("#export" + tables[i]).click(function(e) {
 			e.preventDefault();
-			//var chapter_id = tables[i].substr(0, tables[i].indexOf('_')); 
-			//var table_id = tables[i].substring(0, 1) + "." + tables[i].substring(1);
+
 			var tableName = $(this).attr("data-tableName");
 			var fileName = $(this).attr("data-fileName");
+			
+			//append table title to exported table
+			var table_to_append = "table" + tables[i];
+			appendRow(table_to_append,tableName);
+
 			//alert(tableName);
-			//var sheet_name = "Chapter " + chapter_id + " Table " + table_id;
-			//var file_name = "Table-" + table_id + "-" + new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls";
-			var file_name =  fileName + "-" + new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls";
+
+			//var file_name =  fileName + "-" + new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls";
+			var file_name = fileName + ".xls";
 			var table = $("#table" + tables[i]);
+
 			if (table && table.length) {
 				$(table).table2excel({
 					exclude: ".noExl",
 					sheetName: tableName,
-					name: fileName,
+					name: tableName,
 					filename: file_name,
 					fileext: ".xls",
-					exclude_img: true,
+					exclude_img: false,
 					exclude_links: true,
 					exclude_inputs: true,
-					preserveColors: false
+					preserveColors: true
 				});
 			}
 		});

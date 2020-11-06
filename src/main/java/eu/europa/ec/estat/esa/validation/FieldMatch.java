@@ -1,4 +1,4 @@
-package eu.europa.ec.estat.esa.constraint;
+package eu.europa.ec.estat.esa.validation;
 
 import javax.validation.Payload;
 import javax.validation.Constraint;

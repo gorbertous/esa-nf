@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+
+<title>Update User</title>
+
+<!-- Header CSS -->
+<div th:replace="fragments/header-css :: header-css"/>
+
+</head>
+<body class="sb-nav-fixed">
+
+	<!-- this is header -->
+
+	<div id="layoutSidenav">
+		
+		<!-- Navbar -->
+		<div th:replace="fragments/header-navbar :: header-navbar"/>
+
+
+		<div id="layoutSidenav_content">
+			
+			
+			<main>
+				<div class="container-fluid">
+				
+					<!-- Left chapters navigation -->
+		   			<div th:replace="fragments/left-adm :: left-adm"/>
+					
+					
+					<!-- Update Definition Form -->
+					<div class="container float-left py-4">
+						
+						<h2>Update User</h2>
+
+						<form action="#" th:action="@{/saveUser}" th:object="${user}"
+							method="POST">
+							
+							<!-- Add hidden form field to handle update -->
+							<input type="hidden" th:field="*{id}" />
+							<label for="firstName">First Name:</label>
+							<input type="text" th:field="*{firstName}" class="form-control mb-4 col-6">
+							<label for="lastName">Last Name:</label>
+							<input type="text" th:field="*{lastName}" class="form-control mb-4 col-6">
+							
+							<label for="email">Email:</label>
+							<input type="text" th:field="*{email}" class="form-control mb-4 col-6">
+							
+							<label for="password">Password:</label>
+							<input type="password" th:field="*{password}" class="form-control mb-4 col-6">
+							
+							<button type="submit" class="btn btn-info col-2"> Update User</button>
+						</form>
+						
+					</div>
+
+				</div>
+			</main>
+
+
+
+			<!-- Footer -->
+			<div th:replace="fragments/footer :: footer"/>
+		</div>
+
+
+	</div>
+	<!-- Footer JS -->
+	<div th:replace="fragments/footer-js :: footer-js"/>
+</body>
+</html>
